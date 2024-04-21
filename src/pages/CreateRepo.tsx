@@ -1,8 +1,7 @@
 import React,{useState} from "react"
 import axios from "axios"
 import Swal from "sweetalert2";
-import dotenv from 'dotenv';
-dotenv.config();
+
 
 // const GITHUB_API_URL ='https://api.github.com';
 const GITHUB_API_URL ='https://api.github.com';
@@ -10,7 +9,7 @@ const GITHUB_API_URL ='https://api.github.com';
 interface CreateRepositoryFormProps {
     onSuccess : ()=> void;
 }
-const accessToken =process.env.REACT_APP_ACCESS_KEY;
+const accessToken =import.meta.env.VITE_API_KEY_SEC;
 
 const CreateRepoForm:React.FC<CreateRepositoryFormProps> = ({onSuccess})=>{
  

@@ -11,8 +11,7 @@ import p3 from "../assets/p3.jpg";
 import p4 from "../assets/p4.jpg";
 import p5 from "../assets/p5.jpg";
 import CreateRepoForm from "./CreateRepo";
-import dotenv from 'dotenv';
-dotenv.config();
+
 
 const LandingPage: React.FC =
 	() => {
@@ -348,7 +347,7 @@ const LandingPage: React.FC =
 														repo={
 															repo
 														}
-														accessToken = {process.env.REACT_APP_ACCESS_KEY}
+														accessToken = {import.meta.env.VITE_API_KEY}
 														
 														onDelete={
 															handleDelete

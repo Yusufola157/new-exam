@@ -1,8 +1,7 @@
 // RepoCard.tsx
 import axios from "axios";
 import React from "react";
-import dotenv from 'dotenv';
-dotenv.config();
+
 
 interface RepoCardProps {
   repo: {
@@ -17,7 +16,7 @@ interface RepoCardProps {
   onDelete: () => void;
 }
 
-const accessToken = process.env.REACT_APP_ACCESS_KEY;
+const accessToken = import.meta.env.VITE_API_KEY;
 
 
 const RepoCard: React.FC<RepoCardProps> = ({ repo,onDelete }) => {

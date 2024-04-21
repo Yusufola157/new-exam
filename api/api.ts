@@ -1,15 +1,13 @@
 // api/github.ts
 import axios from "axios";
-// import process from 'procees'
-import dotenv from 'dotenv';
-dotenv.config();
+
 
 
 const baseURL = "https://api.github.com/users/Yusufola157/repos";
 const baseURLSingle = "https://api.github.com/repositories";
 const baseURLPost = "https://api.github.com";
 
-const accessToken = process.env.REACT_APP_ACCESS_KEY;
+const accessToken = import.meta.env.VITE_API_KEY;
 
 
 
